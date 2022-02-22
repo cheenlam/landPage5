@@ -1,0 +1,331 @@
+html, body, div, span, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  font-weight: normal;
+}
+
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+* {
+  font-family: 'Helvetica', sans-serif;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+}
+
+*:hover, *:focus, *:active {
+  outline: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+tt, em {
+  font-family: 'Helvetica', sans-serif;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button,
+input[type="button"],
+input[type="text"],
+input[type="number"],
+textarea {
+  outline: none;
+  font-family: 'Helvetica', sans-serif;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input::-ms-reveal {
+  display: none;
+}
+
+input[type="password"]::-webkit-textfield-decoration-container {
+  visibility: hidden;
+}
+
+.nofloat:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+/* ::-webkit-scrollbar{ 
+	width:10px;
+	height: 10px;
+	background-color:#f1f1f1;
+} */
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border: 3px #f1f1f1 solid;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: background .5s linear;
+  transition: background .5s linear;
+}
+
+*:hover::-webkit-scrollbar-thumb {
+  background-color: #a9a9a9;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #f1f1f1;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+body {
+  background: #000 url(../images/bg.webp) no-repeat center top/1920px auto;
+}
+
+@media screen and (max-width: 1920px) {
+  body {
+    background-position: left top;
+  }
+}
+
+.indexBox {
+  min-height: 100vh;
+  max-width: 1200px;
+  padding: 0 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+  .indexBox {
+    padding: 30px 10px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.mainImg {
+  width: 65%;
+  -webkit-animation: float 3s infinite linear;
+          animation: float 3s infinite linear;
+}
+
+@media screen and (max-width: 1100px) {
+  .mainImg {
+    width: 100%;
+    max-width: 700px;
+    margin-bottom: 30px;
+  }
+}
+
+.msgBox {
+  width: 35%;
+  margin-left: -3%;
+}
+
+@media screen and (max-width: 1100px) {
+  .msgBox {
+    width: 90%;
+    max-width: 380px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 0;
+  }
+}
+
+.msgBox .qrBox {
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 1100px) {
+  .msgBox .qrBox {
+    margin: 30px 0 10px;
+  }
+}
+
+.msgBox .qrBox .code {
+  width: 90px;
+  margin: 0 auto 7px;
+}
+
+.msgBox .mainTitle {
+  margin: 30px 0;
+}
+
+@media screen and (max-width: 1100px) {
+  .msgBox .mainTitle {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+    margin: 0;
+  }
+}
+
+.msgBox .btnBox {
+  width: 100%;
+  max-width: 360px;
+  padding: 0 10px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 400px) {
+  .msgBox .btnBox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.msgBox .btnBox .btn {
+  padding: 13px 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  opacity: 0.7;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+@media (any-hover: hover) {
+  .msgBox .btnBox .btn:hover {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .msgBox .btnBox .btn {
+    min-width: 200px;
+  }
+}
+
+.msgBox .btnBox .btn + .btn {
+  margin-left: 8px;
+}
+
+@media screen and (max-width: 400px) {
+  .msgBox .btnBox .btn + .btn {
+    margin: 10px 0 0;
+  }
+}
+
+.msgBox .btnBox .icon {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  background: no-repeat center;
+}
+
+.msgBox .btnBox .icon.android {
+  background-size: 20px 20px;
+  background-image: url(../images/googlePlay.svg);
+}
+
+.msgBox .btnBox .icon.ios {
+  background-image: url(../images/apple.svg);
+}
+
+.msgBox .btnBox p {
+  width: 65px;
+  text-align: center;
+}
+
+@-webkit-keyframes float {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+/*# sourceMappingURL=all.css.map */

@@ -1,0 +1,137 @@
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+body {
+    background:#000 url(../images/bg.webp) no-repeat center top /1920px auto;
+    @include rwd(1920){
+        background-position: left top;
+    }
+}
+
+.indexBox {
+    min-height: 100vh;
+    max-width: 1200px;
+    padding: 0 10px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    @include rwd(1100){
+        padding: 30px 10px; 
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    @at-root .mainImg {
+        width: 65%;
+        animation: float 3s infinite linear;
+        @include rwd(1100){
+            width: 100%;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+    }
+
+    @at-root .msgBox {
+        width: 35%;
+        margin-left: -3%;
+        @include rwd(1100){
+            width: 90%;
+            max-width: 380px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 0;
+        }
+        .qrBox {
+            text-align: center;
+            color: #fff;
+            font-size: 14px;
+            @include rwd(1100){
+                margin: 30px 0 10px;
+            }
+            .code {
+                width: 90px;
+                margin: 0 auto 7px;
+            }
+        }
+
+        .mainTitle{
+            margin: 30px 0;
+            @include rwd(1100){
+                order: -1;
+                margin: 0;
+            }
+        }
+
+        .btnBox {
+            width: 100%;
+            max-width: 360px;
+            padding: 0 10px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            @include rwd(400) {
+                flex-direction: column;
+                align-items: center;
+            }
+            .btn {
+                padding: 13px 0;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                color: #fff;
+                font-size: 15px;
+                cursor: pointer;
+                opacity: 0.7;
+                transition: 0.5s;
+                @include hover {
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+                @include rwd(400) {
+                    min-width: 200px;
+                }
+            }
+            .btn + .btn {
+                margin-left: 8px;
+                @include rwd(400) {
+                    margin: 10px 0 0;
+                }
+            }
+            .icon {
+                width: 25px;
+                height: 25px;
+                margin-right: 5px;
+                background: no-repeat center;
+                &.android {
+                    background-size: 20px 20px;
+                    background-image: url(../images/googlePlay.svg);
+                }
+                &.ios {
+                    background-image: url(../images/apple.svg);
+                }
+            }
+            p{
+                width: 65px;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@keyframes float{
+    0%,100%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateY(-10px);
+    }
+}
