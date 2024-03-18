@@ -13,26 +13,50 @@
             <img src="images/main.webp">
         </div>
         <div class="msgBox">
-            <div class="qrBox">
+            <!-- <div class="qrBox">
                 <div class="code">
                     <img src="images/qrCode.png">
                 </div>
                 <p>掃碼快捷安裝客戶端</p>
-            </div>
+            </div> -->
             <div class="mainTitle">
-                <img src="images/title.png">
+                <img src="images/title.webp">
             </div>
             <div class="btnBox">
-                <div class="btn">
+                <a class="btn" href="https://58por.com/">
+                    <div class="icon desktop"></div>
+                    <p>Desktop</p>
+                </a>
+                <div class="btn downloadbtn" >
                     <div class="icon android"></div>
                     <p>Android</p>
                 </div>
-                <div class="btn">
+                <div class="btn downloadbtn">
                     <div class="icon ios"></div>
                     <p>iPhone</p>
                 </div>
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" charset="UTF-8" src="https://web.cdn.openinstall.io/openinstall.js"></script>
+    <script type="text/javascript">
+          var data = OpenInstall.parseUrlParams();
+        new OpenInstall({
+            appKey : "cf5lix",
+            onready : function() {
+                this.schemeWakeup();
+                var m = this;
+                var button = document.querySelectorAll('.downloadbtn');
+                button.forEach(item => {
+                    item.onclick = function() {
+                        m.wakeupOrInstall();
+                        return false;
+                    }
+                })
+            }
+        }, data);
+    </script>
+    
 </body>
 </html>
